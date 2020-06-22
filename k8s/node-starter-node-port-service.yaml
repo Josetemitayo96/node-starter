@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-starter-nodeport-service
+spec:
+  type: NodePort
+  selector:
+    component: node-starter
+  ports:
+    - port: 3000
+      targetPort: 3000

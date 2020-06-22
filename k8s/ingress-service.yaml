@@ -1,0 +1,8 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-service
+spec:
+  backend:
+    serviceName: node-starter-nodeport-service
+    servicePort: 3000

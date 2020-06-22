@@ -1,0 +1,20 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: node-starter
+  template:
+    metadata:
+      labels:
+        component: node-starter
+    spec:
+      containers:
+        - name: node-app
+          image: tayo96/node-starter
+          ports:
+            - containerPort: 3000
